@@ -21,8 +21,6 @@ const Products = () => {
     dispatch(filterProducts(products));
   }, [products]);
 
-  console.log(filter);
-
   return (
     <ProductsContainer>
       <div className="products-container">
@@ -32,7 +30,7 @@ const Products = () => {
               <div className="product-container" key={uuid()}>
                 <img src={product?.image} alt={product?.name} />
                 <p className="name">{product?.name}</p>
-                <p className="precio">{product?.price}</p>
+                <p className="precio">R$ {product?.price}</p>
                 <p className="desc">{product?.desc}</p>
                 <button>COMPRAR</button>
               </div>
@@ -48,7 +46,7 @@ const Products = () => {
               <div className="product-container" key={uuid()}>
                 <img src={product?.image} alt={product?.name} />
                 <p className="name">{product?.name}</p>
-                <p className="precio">{product?.price}</p>
+                <p className="precio">R$ {product?.price}</p>
                 <p className="desc">{product?.desc}</p>
                 <button>COMPRAR</button>
               </div>
@@ -64,7 +62,7 @@ const Products = () => {
               <div className="product-container" key={uuid()}>
                 <img src={product?.image} alt={product?.name} />
                 <p className="name">{product?.name}</p>
-                <p className="precio">{product?.price}</p>
+                <p className="precio">R$ {product?.price}</p>
                 <p className="desc">{product?.desc}</p>
                 <button>COMPRAR</button>
               </div>

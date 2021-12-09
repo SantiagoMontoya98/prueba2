@@ -15,6 +15,18 @@ const Searcher = () => {
       .matches(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/, "El nombre solo acepta letras"),
   });
 
+  const filtrarPrecio = ({ target }) => {
+    if (target.value === "menor") {
+      const filter = products.filter((p) => p.price <= 100);
+      dispatch(filterProducts(filter));
+    }
+
+    if (target.value === "mayor") {
+      const filter = products.filter((p) => p.price > 100);
+      dispatch(filterProducts(filter));
+    }
+  };
+
   return (
     <SearcherContainer>
       <Formik
@@ -43,7 +55,7 @@ const Searcher = () => {
           </Form>
         )}
       </Formik>
-      <select className="filtro">
+      <select className="filtro" onChange={filtrarPrecio}>
         <option value="ordenar" style={{ display: "none" }}>
           Ordenar por
         </option>

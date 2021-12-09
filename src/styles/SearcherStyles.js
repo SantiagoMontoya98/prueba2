@@ -28,7 +28,7 @@ export const SearcherContainer = styled.div`
   }
   .filtro {
     width: 40%;
-    font-size: 10px;
+    font-size: 1.5vw;
     font-family: sans-serif;
   }
   .error {
